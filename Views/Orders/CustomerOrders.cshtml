@@ -1,0 +1,49 @@
+﻿@model IEnumerable<AZUL.COM.Models.Orders>
+@{
+    ViewData["Title"] = "Orders";
+    Layout = "~/Views/Shared/CustomerDash_Layout.cshtml";
+    var totalPrice = ViewBag.totalPrice;
+}
+
+<div class="d-flex justify-content-center">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Date)
+                </th>
+                <th>
+                    Meal Price
+                </th>
+                <th>
+                    Meal Name
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.Date.ToLongDateString()
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TotalPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Meal.Name)
+                    </td>
+
+
+                </tr>
+            }
+        <tr>
+            <td>Total price </td>
+            <td>@totalPrice</td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+

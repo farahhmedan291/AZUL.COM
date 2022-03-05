@@ -1,0 +1,169 @@
+﻿@model AZUL.COM.Models.AboutUsPage
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+
+<h4>AboutUsPage</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="HeaderImage" class="control-label"></label>
+                <input asp-for="HeaderImage" class="form-control" />
+                <span asp-validation-for="HeaderImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DescImage" class="control-label"></label>
+                <input asp-for="DescImage" class="form-control" />
+                <span asp-validation-for="DescImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DescHeader" class="control-label"></label>
+                <input asp-for="DescHeader" class="form-control" />
+                <span asp-validation-for="DescHeader" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DescParagraph" class="control-label"></label>
+                <input asp-for="DescParagraph" class="form-control" />
+                <span asp-validation-for="DescParagraph" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DescImage2" class="control-label"></label>
+                <input asp-for="DescImage2" class="form-control" />
+                <span asp-validation-for="DescImage2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DescHeader2" class="control-label"></label>
+                <input asp-for="DescHeader2" class="form-control" />
+                <span asp-validation-for="DescHeader2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DescParagraph2" class="control-label"></label>
+                <input asp-for="DescParagraph2" class="form-control" />
+                <span asp-validation-for="DescParagraph2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FeaturesImage1" class="control-label"></label>
+                <input asp-for="FeaturesImage1" class="form-control" />
+                <span asp-validation-for="FeaturesImage1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FeaturesImage2" class="control-label"></label>
+                <input asp-for="FeaturesImage2" class="form-control" />
+                <span asp-validation-for="FeaturesImage2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FeaturesImage3" class="control-label"></label>
+                <input asp-for="FeaturesImage3" class="form-control" />
+                <span asp-validation-for="FeaturesImage3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FeaturesHeader" class="control-label"></label>
+                <input asp-for="FeaturesHeader" class="form-control" />
+                <span asp-validation-for="FeaturesHeader" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FeaturesImagePoint1" class="control-label"></label>
+                <input asp-for="FeaturesImagePoint1" class="form-control" />
+                <span asp-validation-for="FeaturesImagePoint1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FeaturesImagePoint2" class="control-label"></label>
+                <input asp-for="FeaturesImagePoint2" class="form-control" />
+                <span asp-validation-for="FeaturesImagePoint2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FeaturesImagePoint3" class="control-label"></label>
+                <input asp-for="FeaturesImagePoint3" class="form-control" />
+                <span asp-validation-for="FeaturesImagePoint3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FeaturesImagePoint4" class="control-label"></label>
+                <input asp-for="FeaturesImagePoint4" class="form-control" />
+                <span asp-validation-for="FeaturesImagePoint4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FeaturesImagePoint5" class="control-label"></label>
+                <input asp-for="FeaturesImagePoint5" class="form-control" />
+                <span asp-validation-for="FeaturesImagePoint5" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FeaturesImagePoint6" class="control-label"></label>
+                <input asp-for="FeaturesImagePoint6" class="form-control" />
+                <span asp-validation-for="FeaturesImagePoint6" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FeaturesImagePoint7" class="control-label"></label>
+                <input asp-for="FeaturesImagePoint7" class="form-control" />
+                <span asp-validation-for="FeaturesImagePoint7" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FeaturesImagePoint8" class="control-label"></label>
+                <input asp-for="FeaturesImagePoint8" class="form-control" />
+                <span asp-validation-for="FeaturesImagePoint8" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FeaturesImagePoint9" class="control-label"></label>
+                <input asp-for="FeaturesImagePoint9" class="form-control" />
+                <span asp-validation-for="FeaturesImagePoint9" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RateHeader" class="control-label"></label>
+                <input asp-for="RateHeader" class="form-control" />
+                <span asp-validation-for="RateHeader" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RateParagraph1" class="control-label"></label>
+                <input asp-for="RateParagraph1" class="form-control" />
+                <span asp-validation-for="RateParagraph1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RateParagraph2" class="control-label"></label>
+                <input asp-for="RateParagraph2" class="form-control" />
+                <span asp-validation-for="RateParagraph2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RateName1" class="control-label"></label>
+                <input asp-for="RateName1" class="form-control" />
+                <span asp-validation-for="RateName1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RateName2" class="control-label"></label>
+                <input asp-for="RateName2" class="form-control" />
+                <span asp-validation-for="RateName2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RateImage1" class="control-label"></label>
+                <input asp-for="RateImage1" class="form-control" />
+                <span asp-validation-for="RateImage1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RateImage2" class="control-label"></label>
+                <input asp-for="RateImage2" class="form-control" />
+                <span asp-validation-for="RateImage2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+</body>
+</html>

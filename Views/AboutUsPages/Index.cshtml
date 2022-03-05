@@ -1,0 +1,199 @@
+﻿@model IEnumerable<AZUL.COM.Models.AboutUsPage>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.HeaderImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescHeader)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescParagraph)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescImage2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescHeader2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescParagraph2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FeaturesImage1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FeaturesImage2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FeaturesImage3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FeaturesHeader)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FeaturesImagePoint1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FeaturesImagePoint2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FeaturesImagePoint3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FeaturesImagePoint4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FeaturesImagePoint5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FeaturesImagePoint6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FeaturesImagePoint7)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FeaturesImagePoint8)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FeaturesImagePoint9)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RateHeader)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RateParagraph1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RateParagraph2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RateName1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RateName2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RateImage1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RateImage2)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeaderImage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescImage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescHeader)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescParagraph)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescImage2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescHeader2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescParagraph2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeaturesImage1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeaturesImage2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeaturesImage3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeaturesHeader)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeaturesImagePoint1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeaturesImagePoint2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeaturesImagePoint3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeaturesImagePoint4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeaturesImagePoint5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeaturesImagePoint6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeaturesImagePoint7)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeaturesImagePoint8)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeaturesImagePoint9)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RateHeader)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RateParagraph1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RateParagraph2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RateName1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RateName2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RateImage1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RateImage2)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

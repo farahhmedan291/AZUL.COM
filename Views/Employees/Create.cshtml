@@ -1,0 +1,73 @@
+﻿@model AZUL.COM.Models.Employee
+
+@{
+    Layout = "~/Views/Shared/dash_Layout.cshtml";
+}
+
+
+
+
+<h4 style="margin:60px;">Employee</h4>
+<hr />
+<div class="row" style="margin:60px;">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NationalNumber" class="control-label"></label>
+                <input asp-for="NationalNumber" class="form-control" />
+                <span asp-validation-for="NationalNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BirthDate" class="control-label"></label>
+                <input asp-for="BirthDate" class="form-control" />
+                <span asp-validation-for="BirthDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Salary" class="control-label"></label>
+                <input asp-for="Salary" class="form-control" />
+                <span asp-validation-for="Salary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageFile" class="control-label"></label>
+                <input asp-for="ImageFile" accept="image/*" />
+                <span asp-validation-for="ImageFile"></span>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="DeptType" class="control-label"></label>
+                <select asp-for="DeptType" class="form-control" asp-items="ViewBag.DeptType"></select>
+            </div>
+            <div class="form-group">
+                <input id="username" type="text" name="username" class="form-control form-control-user" id="exampleInputUsername"
+                       placeholder="Username" required>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <input type="password" name="password" class="form-control form-control-user"
+                           id="exampleInputPassword" placeholder="Password" required>
+                </div>
+            </div>
+                <div class="form-group">
+                    <input type="submit" value="Add" class="btn btn-primary btn-lg" />
+                </div>
+        </form>
+    </div>
+</div>
+
+

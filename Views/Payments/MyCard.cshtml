@@ -1,0 +1,55 @@
+﻿@model IEnumerable<AZUL.COM.Models.Payment>
+
+@{
+    ViewData["Title"] = "MyCard";
+    Layout = "~/Views/Shared/CustomerDash_Layout.cshtml";
+}
+
+<h1 style="margin:100px;">My Card information</h1>
+<div class="d-flex justify-content-center">
+    <a asp-action="Create">
+        <button type="button" class="btn btn-outline-info btn-lg" style="margin:40px 15px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+            </svg>
+            Add New Card
+        </button>
+    </a>
+</div>
+<table class="table" style="margin:100px;">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountOfMoney)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CardNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExpDate)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AmountOfMoney)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CardNumber)
+                </td>
+                <td>
+                    @item.ExpDate.ToLongDateString()
+                </td>
+
+                <td>
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

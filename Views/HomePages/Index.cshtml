@@ -1,0 +1,265 @@
+﻿@model IEnumerable<AZUL.COM.Models.HomePage>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SlideImage1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SlideImage2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SlideImage3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SlideHeader1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SlideHeader2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SlideHeader3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SlideParagraph1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SlideParagraph2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SlideParagraph3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescImage1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescImage2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescImage3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescHeader)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescParagraph)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescPoint1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescPoint2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PoolImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PoolHeader)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PoolParagraph)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomHeader)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomParagraph)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomImage1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomImage2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomImage3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomPrice1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomPrice2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomPrice3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomImageHeader1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomImageHeader2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomImageHeader3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomImageParagraph1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomImageParagraph2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomImageParagraph3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactHeader)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactParagraph)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactEmail)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SlideImage1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SlideImage2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SlideImage3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SlideHeader1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SlideHeader2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SlideHeader3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SlideParagraph1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SlideParagraph2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SlideParagraph3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescImage1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescImage2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescImage3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescHeader)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescParagraph)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescPoint1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescPoint2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PoolImage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PoolHeader)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PoolParagraph)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomHeader)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomParagraph)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomImage1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomImage2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomImage3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomPrice1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomPrice2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomPrice3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomImageHeader1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomImageHeader2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomImageHeader3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomImageParagraph1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomImageParagraph2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomImageParagraph3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactHeader)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactParagraph)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactEmail)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

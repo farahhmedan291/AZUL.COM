@@ -1,0 +1,181 @@
+﻿@model IEnumerable<AZUL.COM.Models.ServicesPage>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.HeaderImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescHeader)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescParagraph)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescImage1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescImage2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescImage3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescSubHeader1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescSubHeader2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescSubHeader3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescSubParagraph1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescSubParagraph2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescSubParagraph3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServicesHeader1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServicesHeader2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServicesHeader3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServicesHeader4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServicesHeader5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServicesHeader6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServicesParagraph1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServicesParagraph2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServicesParagraph3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServicesParagraph4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServicesParagraph5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServicesParagraph6)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeaderImage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescHeader)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescParagraph)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescImage1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescImage2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescImage3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescSubHeader1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescSubHeader2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescSubHeader3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescSubParagraph1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescSubParagraph2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescSubParagraph3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServicesHeader1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServicesHeader2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServicesHeader3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServicesHeader4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServicesHeader5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServicesHeader6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServicesParagraph1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServicesParagraph2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServicesParagraph3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServicesParagraph4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServicesParagraph5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServicesParagraph6)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

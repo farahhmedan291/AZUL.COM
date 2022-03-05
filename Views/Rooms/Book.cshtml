@@ -1,0 +1,68 @@
+﻿@model IEnumerable<AZUL.COM.Models.Room>
+
+@{
+    ViewData["Title"] = "Book";
+    Layout = "~/Views/Shared/CustomerDash_Layout.cshtml";
+}
+
+<div class="d-flex justify-content-center">
+    <a asp-controller="Reservations" asp-action="Create"> <input type="submit" class="btn btn-lg btn-outline-info" value="Book a Room"  style="margin:100px;"/></a>
+</div>
+
+<table class="table" style="margin:40px;">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FloorNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpecialDetails)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomType)
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            @foreach (var item in Model)
+            {
+                var id1 = @item.Id;
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.FloorNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                <img src=@Url.Content("~/Img/" + item.ImageName) asp-append-version="true" style=" width:250px; height:250px;" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpecialDetails)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomType.Type)
+            </td>
+
+        </tr>
+            }}
+    </tbody>
+</table>
+
+   

@@ -1,0 +1,35 @@
+﻿@model AZUL.COM.Models.CustomerServices
+
+@{
+    ViewData["Title"] = "Order Service";
+    Layout = "~/Views/Shared/CustomerDash_Layout.cshtml";
+}
+
+
+
+<h4 style="margin:40px;">Order Service</h4>
+<hr />
+
+    <div class="row" style="margin:40px;">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="ServiceId" class="control-label"></label>
+                    <select asp-for="ServiceId" class="form-control" asp-items="ViewBag.ServiceId"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Date" class="control-label">Select Date</label>
+                    <input asp-for="Date" type="date" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+

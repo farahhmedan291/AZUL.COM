@@ -1,0 +1,67 @@
+﻿@model IEnumerable<AZUL.COM.Models.Reservation>
+
+@{
+    ViewData["Title"] = "MyReservation";
+    Layout = "~/Views/Shared/CustomerDash_Layout.cshtml";
+}
+
+<h1 style="margin:100px">My Reservations</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ResDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CheckInDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CheckOutDate)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Room)
+            </th>
+            <th>
+                Room Price
+            </th>
+            <th>
+                Number of Days
+            </th>
+            <th>
+                Total Price
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.ResDate.ToLongDateString()
+
+                </td>
+                <td>
+                    @item.CheckInDate.ToLongDateString()
+                </td>
+                <td>
+                    @item.CheckOutDate.ToLongDateString()
+                </td>
+               
+                <td>
+                    @Html.DisplayFor(modelItem => item.Room.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Room.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.numberOfDayes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReservationsPrice)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

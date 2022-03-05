@@ -1,0 +1,28 @@
+﻿@model AZUL.COM.Models.Customer
+
+@{
+    ViewData["Title"] = "Profile";
+    Layout = "~/Views/Shared/CustomerDash_Layout.cshtml";
+    var name = ViewBag.name;
+    var userName = ViewBag.userName;
+    var id = ViewBag.id;
+}
+
+<div class="d-flex justify-content-center" style="margin:60px auto 40px auto;">
+
+    <div class=" d-flex justify-content-center" style="margin:40px">
+        <img src=@Url.Content("~/Img/"+Model.ImageName) asp-append-version="true" style="border-radius:50%" width="250" height="250" />
+    </div>
+</div>
+<div class=" d-flex justify-content-center" style="margin:40px">
+
+    <a asp-action="EditProfile" asp-route-id="@Model.Id"><button class="btn btn-lg btn-danger" style="margin-bottom:40px;">Edit Profile</button></a>
+</div>
+
+<h3 style=" margin: 10px 10px 40px 50px;"><span style="color: #000;">● First Name</span> : @Model.FName</h3>
+<h3 style=" margin: 10px 10px 40px 50px;"><span style="color: #000;">● Last Name</span> : @Model.LName</h3>
+<h3 style=" margin: 10px 10px 40px 50px;"><span style="color: #000;">● Username</span> : @userName</h3>
+<h3 style=" margin: 10px 10px 40px 50px;"><span style="color: #000;">● Email</span> : @Model.Email</h3>
+<h3 style=" margin: 10px 10px 40px 50px;"><span style="color: #000;">● National Number</span> : @Model.NationalNumber</h3>
+<h3 style=" margin: 10px 10px 40px 50px;"><span style="color:#000;">● Birthdate</span> : @Model.BirthDate.ToLongDateString()</h3>
+<h3 style=" margin: 10px 10px 40px 50px;"><span style="color: #000;">● Phone Number</span> : @Model.PhoneNumber</h3>

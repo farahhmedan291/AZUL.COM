@@ -1,0 +1,56 @@
+﻿@model AZUL.COM.Models.Room
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/dash_Layout.cshtml";
+}
+
+<h1 style="margin:60px">Add Room</h1>
+
+<hr />
+<div class="row" style="margin:60px">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="State" class="control-label"></label>
+                <input asp-for="State" class="form-control" />
+                <span asp-validation-for="State" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FloorNumber" class="control-label"></label>
+                <input asp-for="FloorNumber" class="form-control" />
+                <span asp-validation-for="FloorNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SpecialDetails" class="control-label"></label>
+                <input asp-for="SpecialDetails" class="form-control" />
+                <span asp-validation-for="SpecialDetails" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RoomTypeId" class="control-label"></label>
+                <select asp-for="RoomTypeId" class="form-control" asp-items="ViewBag.RoomTypeId"></select>
+            </div>
+           
+            <div class="form-group">
+                <label asp-for="ImageFile" class="control-label"></label>
+                <input asp-for="ImageFile" accept="image/*" />
+                <span asp-validation-for="ImageFile"></span>
+
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="AddRoom" style="margin:60px">Back to List</a>
+</div>
+

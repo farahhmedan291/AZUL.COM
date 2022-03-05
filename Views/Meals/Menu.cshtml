@@ -1,0 +1,60 @@
+﻿@model IEnumerable<AZUL.COM.Models.Meal>
+
+@{
+    ViewData["Title"] = "Menu";
+    Layout = "~/Views/Shared/CustomerDash_Layout.cshtml";
+}
+
+<h1 style="margin:60px;">Menu</h1>
+<div class="d-grid gap-2 d-md-block" style="margin:40px">
+    <a asp-controller="Orders" asp-action="CustomerOrders">
+        <button class="btn btn-info" type="button">my orders</button>
+    </a>
+    <a asp-controller="Orders" asp-action="Create">
+        <button class="btn btn-info" type="button">order now</button>
+    </a>
+</div>
+<div class="d-flex justify-content-center">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ImageName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Category)
+                </th>
+              
+               
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        <img src=@Url.Content("~/Img/" + item.ImageName) asp-append-version="true" style="border-radius:50%; width:150px; height:150px;" />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category.Name)
+                    </td>
+                   
+                 
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

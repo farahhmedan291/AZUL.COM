@@ -1,0 +1,57 @@
+﻿@model AZUL.COM.Models.Reservation
+
+@{
+    Layout = "~/Views/Shared/dash_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+    <div>
+        <h4 style="margin:60px">Reservation</h4>
+        <hr />
+        <dl class="row" style="margin:60px">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ResDate)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ResDate)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CheckInDate)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CheckInDate)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CheckOutDate)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CheckOutDate)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Customer)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Customer.FName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Room)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Room.State)
+            </dd>
+        </dl>
+    </div>
+    <div style="margin:60px">
+        <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
+</body>
+</html>

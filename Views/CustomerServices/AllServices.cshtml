@@ -1,0 +1,41 @@
+﻿@model IEnumerable<AZUL.COM.Models.CustomerServices>
+
+@{
+    ViewData["Title"] = "AllServices";
+    Layout = "~/Views/Shared/WaiterDash_Layout.cshtml";
+}
+
+<table class="table" style="margin:60px;">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Service)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Customer.FName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Service.Name)
+                </td>
+                <td>
+                    @item.Date.ToLongDateString()
+                </td>
+               
+            </tr>
+        }
+    </tbody>
+</table>
+

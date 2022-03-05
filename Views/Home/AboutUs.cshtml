@@ -1,0 +1,275 @@
+﻿
+@{
+    ViewData["Title"] = "AboutUs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var HeaderImage = ViewBag.HeaderImage;
+    var DescImage = ViewBag.DescImage;
+    var DescHeader = ViewBag.DescHeader;
+    var DescParagraph = ViewBag.DescParagraph;
+    var DescImage2 = ViewBag.DescImage2;
+    var DescHeader2 = ViewBag.DescHeader2;
+    var DescParagraph2 = ViewBag.DescParagraph2;
+    var FeaturesImage1 = ViewBag.FeaturesImage1;
+    var FeaturesImage2 = ViewBag.FeaturesImage2;
+    var FeaturesImage3 = ViewBag.FeaturesImage3;
+    var FeaturesHeader = ViewBag.FeaturesHeader;
+    var FeaturesImagePoint1 = ViewBag.FeaturesImagePoint1;
+    var FeaturesImagePoint2 = ViewBag.FeaturesImagePoint2;
+    var FeaturesImagePoint3 = ViewBag.FeaturesImagePoint3;
+    var FeaturesImagePoint4 = ViewBag.FeaturesImagePoint4;
+    var FeaturesImagePoint5 = ViewBag.FeaturesImagePoint5;
+    var FeaturesImagePoint6 = ViewBag.FeaturesImagePoint6;
+    var FeaturesImagePoint7 = ViewBag.FeaturesImagePoint7;
+    var FeaturesImagePoint8 = ViewBag.FeaturesImagePoint8;
+    var FeaturesImagePoint9 = ViewBag.FeaturesImagePoint9;
+    var RateHeader = ViewBag.RateHeader;
+    var RateParagraph1 = ViewBag.RateParagraph1;
+    var RateParagraph2 = ViewBag.RateParagraph2;
+    var RateName1 = ViewBag.RateName1;
+    var RateName2 = ViewBag.RateName2;
+    var RateImage1 = ViewBag.RateImage1;
+    var RateImage2 = ViewBag.RateImage2;
+}
+
+<!-- ##### Breadcumb Area Start ##### -->
+<section class="breadcumb-area bg-img d-flex align-items-center justify-content-center" style="background-image: url(@HeaderImage);">
+    <div class="bradcumbContent">
+        <h2>About us</h2>
+    </div>
+</section>
+<!-- ##### Breadcumb Area End ##### -->
+<!-- ##### Book Now Area Start ##### -->
+<div class="book-now-area">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+                <div class="book-now-form" style="margin-left:100px">
+                    <form action="#">
+                        <!-- Form Group -->
+                        <div class="form-group">
+                            <label for="select1">Check In</label>
+                            <select class="form-control" id="select1">
+                                <option>19 June</option>
+                                <option>20 June</option>
+                                <option>21 June</option>
+                                <option>22 June</option>
+                                <option>23 June</option>
+                                <option>24 June</option>
+                                <option>25 June</option>
+                            </select>
+                        </div>
+
+                        <!-- Form Group -->
+                        <div class="form-group">
+                            <label for="select2">Check Out</label>
+                            <select class="form-control" id="select2">
+                                <option>20 June</option>
+                                <option>21 June</option>
+                                <option>22 June</option>
+                                <option>23 June</option>
+                                <option>24 June</option>
+                                <option>25 June</option>
+                                <option>26 June</option>
+                                <option>27 June</option>
+                            </select>
+                        </div>
+
+                        <!-- Form Group -->
+                        <div class="form-group">
+                            <label for="select3">Person</label>
+                            <select class="form-control" id="select3">
+                                <option>02</option>
+                                <option>03</option>
+                                <option>04</option>
+                                <option>05</option>
+                                <option>06</option>
+                            </select>
+                        </div>
+
+
+
+                        <!-- Button -->
+                        <button type="submit" asp-controller="Logins" asp-action="Login">Book Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ##### Book Now Area End ##### -->
+<!-- ##### About Us Area Start ##### -->
+<section class="about-us-area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-6">
+                <div class="about-text mb-100">
+                    <div class="section-heading">
+                        <div class="line-"></div>
+                        <h2>@DescHeader</h2>
+                    </div>
+                    <p>@DescParagraph</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+                <div class="about-thumbnail mb-100">
+                    <img src="@Url.Content(DescImage)" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### About Us Area End ##### -->
+<!-- ##### Milestones Area Start ##### -->
+<section class="our-milestones section-padding-100-0 bg-img bg-overlay bg-fixed" style="background-image: url(@DescImage2);">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="section-heading text-center white">
+                    <div class="line-"></div>
+                    <h2>@DescHeader2</h2>
+                    <p>@DescParagraph2</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <!-- Single Cool Facts -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="single-cool-fact mb-100 wow fadeInUp" data-wow-delay="300ms">
+                    <div class="scf-text">
+                        <i class="icon-cocktail-1"></i>
+                        <h2><span class="counter">231</span></h2>
+                        <p>Cocktails/day</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Cool Facts -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="single-cool-fact mb-100 wow fadeInUp" data-wow-delay="500ms">
+                    <div class="scf-text">
+                        <i class="icon-swimming-pool"></i>
+                        <h2><span class="counter">3</span></h2>
+                        <p>Pools</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Cool Facts -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="single-cool-fact mb-100 wow fadeInUp" data-wow-delay="700ms">
+                    <div class="scf-text">
+                        <i class="icon-resort"></i>
+                        <h2><span class="counter">79</span></h2>
+                        <p>Rooms</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Cool Facts -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="single-cool-fact mb-100 wow fadeInUp" data-wow-delay="900ms">
+                    <div class="scf-text">
+                        <i class="icon-restaurant"></i>
+                        <h2><span class="counter">25</span></h2>
+                        <p>Apartments</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- ##### Milestones Area End ##### -->
+<!-- ##### Hotels Area Start ##### -->
+<section class="our-hotels-area section-padding-100-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading text-center">
+                    <div class="line-"></div>
+                    <h2>@FeaturesHeader</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <!-- Single Hotel Info -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="single-hotel-info mb-100">
+                    <div class="hotel-info-text">
+                        <h6><span class="fa fa-check"></span> @FeaturesImagePoint1</h6>
+                        <h6><span class="fa fa-check"></span> @FeaturesImagePoint2</h6>
+                        <h6><span class="fa fa-check"></span> @FeaturesImagePoint3</h6>
+                    </div>
+                    <div class="hotel-img">
+                        <img src="@Url.Content(FeaturesImage1)" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- Single Hotel Info -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="single-hotel-info mb-100">
+                    <div class="hotel-info-text">
+                        <h6><span class="fa fa-check"></span> @FeaturesImagePoint4</h6>
+                        <h6><span class="fa fa-check"></span> @FeaturesImagePoint5</h6>
+                        <h6><span class="fa fa-check"></span> @FeaturesImagePoint6</h6>
+                    </div>
+                    <div class="hotel-img">
+                        <img src="@Url.Content(FeaturesImage2)" alt="" height="372.31">
+                    </div>
+                </div>
+            </div>
+            <!-- Single Hotel Info -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="single-hotel-info mb-100">
+                    <div class="hotel-info-text">
+                        <h6><span class="fa fa-check"></span> @FeaturesImagePoint7</h6>
+                        <h6><span class="fa fa-check"></span> @FeaturesImagePoint8</h6>
+                        <h6><span class="fa fa-check"></span> @FeaturesImagePoint9</h6>
+                    </div>
+                    <div class="hotel-img">
+                        <img src="@Url.Content(FeaturesImage3)" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### Hotels Area End ##### -->
+<!-- ##### Testimonial Area Start ##### -->
+<section class="testimonial-area section-padding-100 bg-img" style="background-image: url(/img/core-img/pattern.png);">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="testimonial-content">
+                    <div class="section-heading text-center">
+                        <div class="line-"></div>
+                        <h2>@RateHeader</h2>
+                    </div>
+
+                    <!-- Testimonial Slides -->
+                    <div class="testimonial-slides owl-carousel">
+
+                        <!-- Single Testimonial -->
+                        <div class="single-testimonial">
+                            <p>@RateParagraph1</p>
+                            <h6>@RateName1 <span>Client</span></h6>
+                            <img src="@Url.Content(@RateImage1)" alt="">
+                        </div>
+
+                        <!-- Single Testimonial -->
+                        <div class="single-testimonial">
+                            <p>@RateParagraph1</p>                            <h6>@RateName2 <span>Developer</span></h6>
+                            <img src="@Url.Content(@RateImage1)" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<AZUL.COM.Models.Message>
+
+@{
+    ViewData["Title"] = "Show";
+    Layout = "~/Views/Shared/dash_Layout.cshtml";
+}
+
+<h1 style="margin:100px">Messages</h1>
+<table class="table" style="margin:100px">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MessageText)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MessageText)
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+

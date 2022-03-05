@@ -1,0 +1,47 @@
+﻿@model IEnumerable<AZUL.COM.Models.Service>
+@{
+    ViewData["Title"] = "Services";
+    Layout = "~/Views/Shared/CustomerDash_Layout.cshtml";
+}
+
+<h1 style="margin:40px">AZUL Services</h1>
+<div class="d-grid gap-2 d-md-block" style="margin:40px">
+    <a asp-controller="CustomerServices" asp-action="MyServices">
+        <button class="btn btn-info" type="button">my services</button>
+    </a>
+    <a asp-controller="CustomerServices" asp-action="Create">
+        <button class="btn btn-info" type="button">order new service</button>
+    </a>
+</div>
+<table class="table" style="margin:40px" >
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageName)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                <img src=@Url.Content("~/Img/" + item.ImageName) asp-append-version="true" style=" width:250px; height:250px;" />
+            </td>
+
+        </tr>
+        }
+    </tbody>
+</table>

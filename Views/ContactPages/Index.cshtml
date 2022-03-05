@@ -1,0 +1,133 @@
+﻿@model IEnumerable<AZUL.COM.Models.ContactPage>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.HeaderImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlaceHeader1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlaceHeader2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlaceHeader3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlaceParagraph1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlaceParagraph2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlaceParagraph3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlaceAddress1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlaceAddress2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlaceAddress3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlacePhone1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlacePhone2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlacePhone3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlaceEmail1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlaceEmail2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlaceEmail3)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeaderImage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlaceHeader1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlaceHeader2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlaceHeader3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlaceParagraph1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlaceParagraph2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlaceParagraph3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlaceAddress1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlaceAddress2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlaceAddress3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlacePhone1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlacePhone2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlacePhone3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlaceEmail1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlaceEmail2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlaceEmail3)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

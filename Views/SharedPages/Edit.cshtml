@@ -1,0 +1,55 @@
+﻿@model AZUL.COM.Models.SharedPage
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+
+<h4>SharedPage</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="HotelName" class="control-label"></label>
+                <input asp-for="HotelName" class="form-control" />
+                <span asp-validation-for="HotelName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FooterHeader" class="control-label"></label>
+                <input asp-for="FooterHeader" class="form-control" />
+                <span asp-validation-for="FooterHeader" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FooterParagraph" class="control-label"></label>
+                <input asp-for="FooterParagraph" class="form-control" />
+                <span asp-validation-for="FooterParagraph" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FooterCopyRight" class="control-label"></label>
+                <input asp-for="FooterCopyRight" class="form-control" />
+                <span asp-validation-for="FooterCopyRight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+</body>
+</html>

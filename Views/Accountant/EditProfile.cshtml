@@ -1,0 +1,78 @@
+﻿@model AZUL.COM.Models.Employee
+@{
+    ViewData["Title"] = "EditProfile";
+    Layout = "~/Views/Shared/AccDash_Layout.cshtml";
+    var userName = ViewBag.userName;
+    var password = ViewBag.password;
+}
+
+<h1>Edit Profile</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditProfile" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="Salary" />
+            <input type="hidden" asp-for="DeptType" />
+            <input type="hidden" asp-for="Profits" />
+            <input type="hidden" asp-for="Losses" />
+            <input type="hidden" asp-for="ImageName" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" name="name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                    <label class="control-label"></label>
+                    <input name="name" class="form-control" placeholder="@userName" />
+
+                </div>
+                <div class="form-group">
+                    <label class="control-label"></label>
+                    <input name="name" class="form-control" placeholder="@password" />
+
+                </div>*@
+
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" name="email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NationalNumber" class="control-label"></label>
+                <input asp-for="NationalNumber" name="nationalNumber" class="form-control" />
+                <span asp-validation-for="NationalNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BirthDate" class="control-label"></label>
+                <input asp-for="BirthDate" name="birthDate" class="form-control" />
+                <span asp-validation-for="BirthDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <input asp-for="PhoneNumber" name="phoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                    <label class="control-label"></label>
+                    <input name="username" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label"></label>
+                    <input name="password" class="form-control" />
+
+                </div>*@
+            <div class="form-group">
+                <label asp-for="ImageFile" class="control-label"></label>
+                <input asp-for="ImageFile" accept="image/*" />
+                <span asp-validation-for="ImageFile"></span>
+
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
